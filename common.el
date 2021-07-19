@@ -6,9 +6,7 @@
 ;;行番号表示
 (global-linum-mode t)
 
-;;;
 ;;; Mouse Wheel
-;;;
 (mouse-wheel-mode)
 (setq mouse-wheel-follow-mouse t)
 
@@ -39,12 +37,6 @@
 (setq fill-column 80)
 (setq-default auto-fill-mode t)
 
-;;hide-show
-(require 'hideshow)
-
-;; minibuffer
-(define-key minibuffer-local-completion-map "\C-w" 'backward-kill-word)
-
 ;;;
 ;;; jump window with C-,
 ;;; switch buffer with C-M-,
@@ -70,15 +62,12 @@
 ;;フォント
 (add-to-list 'default-frame-alist '(font . "ricty-22"))
 
-;; mac setting
-;; (mac-auto-ascii-mode 1)
-
 ;; magit
 ;(global-set-key (kbd "C-x g") 'magit-status)
 ;(global-set-key (kbd "C-x C-g") 'magit-status)
 
 ;; コンパイル時に'make -k'か尋ねない
-(setq compilation-read-command nil)
+(defvar compilation-read-command nil)
 
 ;; コンパイル時にcompilation-bufferを隠す
  (add-hook 'compilation-finish-functions
