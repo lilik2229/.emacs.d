@@ -1,3 +1,8 @@
+;;; package --- Summary
+;;; Commentary:
+
+;;; Code:
+
 ;; https://emacs-jp.github.io/packages/package
 (require 'package)
 
@@ -10,3 +15,5 @@
 
 ;; 初期化
 (package-initialize)
+
+;;; package.el ends here
